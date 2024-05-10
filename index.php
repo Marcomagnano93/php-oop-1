@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '../models/db.php';
+include __DIR__ . '/models/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +25,8 @@ include __DIR__ . '../models/db.php';
                     <th scope="col">Title</th>
                     <th scope="col">Language avaible</th>
                     <th scope="col">Vote</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Description</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,6 +36,8 @@ include __DIR__ . '../models/db.php';
                     <td><?php echo $movies[$i]->title ?></td>
                     <td><?php echo $movies[$i]->language ?></td>
                     <td><?php echo $movies[$i]->vote ?>/10</td>
+                    <td><?php echo $movies[$i]->genre->name ?></td>
+                    <td><?php echo $movies[$i]->genre->description ?></td>
                     </tr>
                     <?php } ?>
                 </tbody>
@@ -41,7 +45,5 @@ include __DIR__ . '../models/db.php';
         </div>
     </div>
 </main>
-
-
 </body>
 </html>

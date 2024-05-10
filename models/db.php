@@ -1,40 +1,19 @@
 <?php
-//definisci la classe
-class Production {
+//Classes
+include __DIR__ . '/Production.php';
+include __DIR__ . '/Genre.php';
 
-    //dichiare delle proprietà per la classe
-    //***proprietà***
-        public $title;
-        public $language;
-        public $vote;
-    
-    //***Metodi***  
-    //Inserisci i valori delle istanze con la fuzione costruct che faccia check di ricevere valori appropriati
-        function __construct(string $_title, string $_language, $_vote)
-        {
-          $this->title = $_title;
-          $this->language = $_language;
-          $this->vote = $this->voteCheck($_vote);
-        }
-    
-    //controlla che il voto sia compreso tra 1 e 10
-        public function voteCheck($vote){
-            if ($vote <= 10 && $vote >= 1){
-                return ceil($vote);
-            }
-            else{
-                return $vote = null;
-            }
-    
-    
-        }
-    }
-//crea due Istanze
 
-$rambo = new Production('Rambo', 'en, it', 7.6);
 
-// var_dump($rambo);
-$et = new Production('E.T.', 'en, it, esp', 5.2);
-// var_dump($et);
-  
-$movies = [$rambo, $et];
+//Istances
+$adult = new Genre('Adult', 'Movie for adult people');
+$family = new Genre('Family', 'Adventure');
+$comic = new Genre('Comic', 'Nice time, perfect for families');
+
+$movies = [
+    new Production('Rambo', 'en, it', 7.6, $adult),
+    new Production('E.T.', 'en, it, esp', 5.2, $family),
+    new Production('Pippobaudo', 'it', 2.5, $adult),
+    new Production('Montalbano', 'it', 9.2, $family),
+    new Production('Richard Benson', 'it', 9, $comic)
+];
