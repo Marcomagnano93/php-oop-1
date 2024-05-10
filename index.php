@@ -16,34 +16,14 @@ include __DIR__ . '/db.php';
     <?php include __DIR__ . '/components/header.php'; ?>
 </header>
 <main>
-    <div class="container my-5">
-        <div class="row">
-            <table class="table">
-                <thead>
-                    <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Language avaible</th>
-                    <th scope="col">Vote</th>
-                    <th scope="col">Genre</th>
-                    <th scope="col">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php for ($i = 0; $i < count($productions); $i++) { ?>
-                    <tr>
-                    <th scope="row"><?php echo $i+1; ?></th>
-                    <td><?php echo $productions[$i]->title ?></td>
-                    <td><?php echo $productions[$i]->language ?></td>
-                    <td><?php echo $productions[$i]->vote ?>/10</td>
-                    <td><?php echo $productions[$i]->genre->name ?></td>
-                    <td><?php echo $productions[$i]->genre->description ?></td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <!-- section movies -->
+    <section> 
+        <?php include __DIR__ . '/components/moviesTable.php'; ?>
+    </section>
+    <!-- section series -->
+    <section>
+        <?php include __DIR__ . '/components/tvSeriesTable.php'; ?>
+    </section>
 </main>
 </body>
 </html>
