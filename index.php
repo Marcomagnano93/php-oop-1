@@ -30,14 +30,14 @@ include __DIR__ . '/db.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for ($i = 0; $i < count($movies); $i++) { ?>
+                    <?php for ($i = 0; $i < count($productions); $i++) { ?>
                     <tr>
                     <th scope="row"><?php echo $i+1; ?></th>
-                    <td><?php echo $movies[$i]->title ?></td>
-                    <td><?php echo $movies[$i]->language ?></td>
-                    <td><?php echo $movies[$i]->vote ?>/10</td>
-                    <td><?php echo $movies[$i]->genre->name ?></td>
-                    <td><?php echo $movies[$i]->genre->description ?></td>
+                    <td><?php echo $productions[$i]->title ?></td>
+                    <td><?php echo $productions[$i]->language ?></td>
+                    <td><?php echo $productions[$i]->vote ?>/10</td>
+                    <td><?php echo $productions[$i]->genre->name ?></td>
+                    <td><?php echo $productions[$i]->genre->description ?></td>
                     </tr>
                     <?php } ?>
                 </tbody>
