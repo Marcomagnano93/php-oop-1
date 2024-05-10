@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/models/db.php';
+include __DIR__ . '/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ include __DIR__ . '/models/db.php';
 </head>
 <body>
 <header>
-    <?php include __DIR__ . '/header.php'; ?>
+    <?php include __DIR__ . '/components/header.php'; ?>
 </header>
 <main>
     <div class="container my-5">

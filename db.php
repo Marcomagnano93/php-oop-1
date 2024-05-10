@@ -1,7 +1,7 @@
 <?php
 //Classes
-include __DIR__ . '/Production.php';
-include __DIR__ . '/Genre.php';
+include __DIR__ . '/models/Production.php';
+include __DIR__ . '/models/Genre.php';
 
 
 
